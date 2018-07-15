@@ -1,20 +1,37 @@
+
+### Explanation - ENG
+ - BaseContract is base class when making javascript Contract using truffle & ES6-javascript
+ - This can be used when using several ES6-javascript like Vue.js, Angular.js and react.js
+ - When developing Ethereum dApp, this class helps to map functions between Solidity and Javascript, and
+   helps web3 process of MetaMask and etc. 
+ - Detail using example can be found on 
+
+### Explanation - KOR
+ - truffle을 이용해서 javascript contract를 개발할 때, 상속받아서 쓰도록 만든 기본 class이다.
+ - 각종 ES6-javascript language에서 아래 BaseContract를 상속을 받아서 이더리움 dApp개발시 사용할 수 있다.
+ - 이더리움 dApp개발시 간단히 solidity의 함수와 js 함수간 매핑하도록 도와주며, metaMask 등의 web3처리를 자동으로 해준다.
+ 자세한 사용예제는 https://github.com/yongarykim/RSTdAppDevEnv/react-frontend/contracts 를 참고하도록 한다.
+
+
+### BaseContract code - Using truffle & ES6-javascript
+
+<pre>
 /**
  * BaseContract - super class of all contracts (using Web3 & TruffleContract)
  *
  * <History>
- * @author  Yong Kim (yongary.kim@gmail.com)
+ * @author  Yong/Gary Kim (yongary.kim@gmail.com)
  * @date 2018.4.5 - first created
  * @date 2018.6.11 - promisify & getMyAccount added
  * @date 2018.6.13 - contractDeployed added.
  *
  */
-
 import Web3 from 'web3';
 import TruffleContract from 'truffle-contract';
 import $ from 'jquery';
 import { Subject } from 'await-notify';
 
-//web3함수를 Promise로 만들기 위한 공통모듈
+//make from Web3 to Promise
 const promisify = (inner) =>
     new Promise((resolve, reject) =>
         inner((err, res) => {
@@ -100,3 +117,4 @@ export default class BaseContract {
         return accounts[0];  //accounts Array의 0번째가 본인 account임.
     }
 }
+</pre>
