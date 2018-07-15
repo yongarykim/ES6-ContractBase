@@ -4,13 +4,13 @@
  - This can be used when using several ES6-javascript like Vue.js, Angular.js and react.js
  - When developing Ethereum dApp, this class helps to map functions between Solidity and Javascript, and
    helps web3 process of MetaMask and etc. 
- - Detail using example can be found on 
+ - Detail using example can be found on https://github.com/yongarykim/RSTdAppDevEnv/tree/master/react-frontend/src/contracts 
 
 ### Explanation - KOR
  - truffle을 이용해서 javascript contract를 개발할 때, 상속받아서 쓰도록 만든 기본 class이다.
  - 각종 ES6-javascript language에서 아래 BaseContract를 상속을 받아서 이더리움 dApp개발시 사용할 수 있다.
  - 이더리움 dApp개발시 간단히 solidity의 함수와 js 함수간 매핑하도록 도와주며, metaMask 등의 web3처리를 자동으로 해준다.
- 자세한 사용예제는 https://github.com/yongarykim/RSTdAppDevEnv/react-frontend/contracts 를 참고하도록 한다.
+ 자세한 사용예제는 https://github.com/yongarykim/RSTdAppDevEnv/tree/master/react-frontend/src/contracts 를 참고하도록 한다.
 
 
 ### BaseContract code - Using truffle & ES6-javascript
